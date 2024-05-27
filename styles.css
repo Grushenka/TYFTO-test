@@ -1,3 +1,19 @@
 .details {
     display: none;
 }
+
+.details div {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.details p {
+    margin-bottom: 10px;
+}
+
+.details img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
