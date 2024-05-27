@@ -1,0 +1,7 @@
+.details {
+    display: none;
+}
+
+.talk-title:focus + .details {
+    display: block;
+}
