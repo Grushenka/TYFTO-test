@@ -103,11 +103,11 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const talks = document.querySelectorAll('.talk');
+            const talkTitles = document.querySelectorAll('.talk-title');
 
-            talks.forEach(talk => {
-                talk.addEventListener('click', () => {
-                    const detailsRow = talk.nextElementSibling;
+            talkTitles.forEach(title => {
+                title.addEventListener('click', () => {
+                    const detailsRow = title.parentElement.nextElementSibling;
                     detailsRow.classList.toggle('show');
                 });
             });
