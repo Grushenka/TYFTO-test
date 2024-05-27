@@ -1,98 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="./images/bulb.jpg" type="image/x-icon">
-        <!-- Load an icon library -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>TYFTO</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Talks Schedule</title>
     <style>
-        .topnav {
-            overflow: auto;
-            float: none;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
             text-align: center;
-            padding: 10px 12px;
-            text-decoration: none;
-            font-size: 17px;
+            color: #333;
         }
-
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
-/* Add a color to the active/current link */
-    .topnav a.active {
-         background-color: #4CAF50;
-        color: white;
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
         }
-
-    body {
-        background-color: linen;
-    }    
-
-    h1 {
-        text-align: center;
-        text-transform: uppercase;
-    }
-    h2 {
-        text-align: center;
-    }
-
-    p {
-        margin: 1% 20% 2% 55%;
-        padding: 1px;
+        th {
+            background-color: #f2f2f2;
         }
-    .text {
-        margin-left: 10%;
-        padding: 1px;
-    }
-    .footer{
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 25px;
-        background-color: rgba(255, 180, 71);
-        color: white;
-        text-align: center;
-        
-    }
-
-    a{
-        padding: 10px;
-    }
-
+        .talk-title {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .details {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        .details img {
+            max-width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
     </style>
-
 </head>
-    <body>
-        <header>
-            <h1>TYFTO Club</h1> 
-        </header>
+<body>
+    <div class="container">
+        <h1>Weekly Talks Schedule</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Title</th>
+                    <th>Speaker</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Replace the placeholders with actual talk information -->
+                <tr class="talk">
+                    <td>June 1, 2024</td>
+                    <td>10:00 AM</td>
+                    <td class="talk-title">Talk Title 1</td>
+                    <td>Speaker Name 1</td>
+                </tr>
+                <tr class="details">
+                    <td colspan="4">
+                        <div>
+                            <p>Description of Talk 1</p>
+                            <img src="talk1.jpg" alt="Talk 1 Image">
+                        </div>
+                    </td>
+                </tr>
+                <tr class="talk">
+                    <td>June 8, 2024</td>
+                    <td>2:00 PM</td>
+                    <td class="talk-title">Talk Title 2</td>
+                    <td>Speaker Name 2</td>
+                </tr>
+                <tr class="details">
+                    <td colspan="4">
+                        <div>
+                            <p>Description of Talk 2</p>
+                            <img src="talk2.jpg" alt="Talk 2 Image">
+                        </div>
+                    </td>
+                </tr>
+                <!-- Add more rows for additional talks -->
+            </tbody>
+        </table>
+    </div>
 
-        <nav class="topnav">
-            <a class="active" href="#">Home</a>
-            <a href="./logistics.html">Logistics</a>
-            <a href="./talks.html">Talks</a>
-            <a href="#gallery">Gallery</a>
-            <a href="./contacts.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-        </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const talks = document.querySelectorAll('.talk');
 
-        <main>
-            <h2>Welcome to the TYFTO Club</h2>
-            <div class="text">
-                <h3>A bit about it</h3>
-                <p>TYFTO stands for <em>Thank You For This Opportunity</em>. The club meets once a month during the year for half an hour. It is intended for anyone at VHS and BD.</p>
-                <p>The goal is for the versatile people of VHS to showcase their ideas, to exchange views, and to have a platform for presentations.</p>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <a href="https://www.youtube.com/channel/UCeQKg_LXV4fF7M9x8RvA7zQ/videos" target="_blank"><i class="fa fa-2x fa-youtube-play"></i></a> 
-            <a href="#"><i class="fa fa-2x fa-facebook-official"></i></a>
-            <a href="mailto:clubtyfto@gmail.com"><i class="fa fa-2x fa-envelope"></i></a>
-        </footer>
-
-    </body>
+            talks.forEach(talk => {
+                const detailsRow = talk.nextElementSibling;
+                talk.addEventListener('click', () => {
+                    detailsRow.classList.toggle('show');
+                });
+            });
+        });
+    </script>
+</body>
 </html>
