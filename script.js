@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
         { date: "2024-05-21", speaker: "Deanna Grogan", title: "My Top Ten Tips on a Cruise", description: "" },
         { date: "2024-06-04", speaker: "Sam Wagter", title: "The Elm Family", description: "Do you love stories with action, drama, romance, death, betrayal, crime and real family connections? Do you love complicated world building and character development with exciting plot twists? Do you love the Sims 4? Join us Tuesday June 4th for the Elm Family Lore presentation – you’ll pay for the full seat, but YOU’LL ONLY NEED THE EDGE (edge…edge…edge…)" },
         { date: "2024-06-11", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2024-07-02", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2024-08-21", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2024-09-21", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2024-10-21", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2024-11-21", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2024-12-21", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2024-06-18", speaker: "Kareem Baassiri", title: "Bachata/Latin Lesson", description: "TBD" },
+        { date: "2024-06-25", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2024-07-02", speaker: "Joshua Mathew", title: "TBD", description: "TBD" },
+        { date: "2024-07-09", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2024-07-16", speaker: "Allyson Steward", title: "TBD", description: "TBD" },
+        { date: "2024-07-23", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2024-07-30", speaker: "Shawn Foster", title: "TBD", description: "TBD" },
         // Additional talks can be added here
     ];
 
