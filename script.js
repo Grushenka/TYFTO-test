@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { date: "2024-06-04", speaker: "Sam Wagter", title: "The Elm Family", description: "Do you love stories with action, drama, romance, death, betrayal, crime and real family connections? Do you love complicated world building and character development with exciting plot twists? Do you love the Sims 4? Join us Tuesday June 4th for the Elm Family Lore presentation – you’ll pay for the full seat, but YOU’LL ONLY NEED THE EDGE (edge…edge…edge…)" },
         { date: "2024-06-11", speaker: "TBD", title: "TBD", description: "TBD" },
         { date: "2024-06-18", speaker: "Kareem Baassiri", title: "Bachata/Latin Lesson", description: "TBD" },
-        { date: "2024-06-25", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2024-06-25", speaker: "Isabella Villaroman", title: "Fashion Lookbooks", description: "TBD" },
         { date: "2024-07-02", speaker: "Joshua Mathew", title: "TBD", description: "TBD" },
         { date: "2024-07-09", speaker: "TBD", title: "TBD", description: "TBD" },
         { date: "2024-07-16", speaker: "Allyson Steward", title: "TBD", description: "TBD" },
