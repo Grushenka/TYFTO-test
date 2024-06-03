@@ -6,10 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
         { date: "2024-06-18", speaker: "Kareem Baassiri", title: "Bachata/Latin Lesson", description: "TBD" },
         { date: "2024-06-25", speaker: "Isabella Villaroman", title: "Fashion Lookbooks", description: "TBD" },
         { date: "2024-07-02", speaker: "Joshua Mathew", title: "TBD", description: "TBD" },
-        { date: "2024-07-09", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2024-07-09", speaker: "Minhal Farrukh", title: "TBD", description: "TBD" },
         { date: "2024-07-16", speaker: "Allyson Steward", title: "TBD", description: "TBD" },
         { date: "2024-07-23", speaker: "TBD", title: "TBD", description: "TBD" },
         { date: "2024-07-30", speaker: "Shawn Foster", title: "TBD", description: "TBD" },
+        { date: "2024-08-06", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2024-08-13", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2024-08-20", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2024-08-27", speaker: "TBD", title: "TBD", description: "TBD" },
+        
         // Additional talks can be added here
     ];
 
