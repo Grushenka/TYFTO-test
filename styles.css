@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-image: url('gs.jpg'); /* Add your background image */
     background-size: cover;
     background-position: center;
@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 20px;
     height: 100vh; /* This will make sure the background covers the full height of the viewport */
+    overflow: hidden; /* Prevents overflow issues */
 }
 
 .content {
@@ -18,6 +19,8 @@ body {
     width: 80%;
     max-width: 960px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    max-height: calc(100vh - 40px); /* Adjusts to viewport height */
+    overflow-y: auto; /* Allows scrolling within the content area */
 }
 
 header {
@@ -53,6 +56,7 @@ input[type="week"] {
     width: 20%;
     margin-bottom: 20px;
 }
+
 /* Adjust column widths */
 th:nth-child(1), td:nth-child(1) {
     width: 12%;
