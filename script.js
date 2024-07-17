@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { date: "2024-07-02", speaker: "Joshua Mathew", title: "My Perspective And Theories On Filmmaking", description: "As I pursue filmmaking, the quest for improvement leads to a deeper exploration of what 'improvement' truly means. I believe art and creativity involve much more than just technical knowledge; they arise from an intimate relationship between the creator and their psyche. Join me as I delve into my theories on these subjects, sharing insights, concepts, and behaviours I have observed throughout my journey in formulating stories." },
         { date: "2024-07-09", speaker: "Minhal Farrukh", title: "My Travel Journey", description: "Embark on a fun journey as I share stories from the places I have travelled! Join me as we explore vibrant cultures, breathtaking landscapes, and the unique experiences!" },
         { date: "2024-07-16", speaker: "Allyson Steward", title: "TBD", description: "TBD" },
-        { date: "2024-07-23", speaker: "Adam Bento", title: "TBD", description: "TBD" },
+        { date: "2024-07-23", speaker: "Adam Bento", title: "Director's Take", description: "Discussing past, present, and future projects." },
         { date: "2024-07-30", speaker: "Shawn Foster", title: "TBD", description: "TBD" },
         { date: "2024-08-06", speaker: "Gunner Gunn", title: "TBD", description: "TBD" },
         { date: "2024-08-13", speaker: "TBD", title: "TBD", description: "TBD" },
