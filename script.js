@@ -7,13 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
         { date: "2024-06-25", speaker: "Isabella Villaroman", title: "Fashion Lookbooks", description: "Interested in seeing stylish fashion, creative photography, intriguing sets, and captivating storytelling? Join me on Tuesday, June 25th for an exciting journey through my three-year exploration in fashion. I'll be showcasing four distinctive lookbooks I've contributed to, revealing insights into the creative process, behind-the-scenes content, and intriguing fun facts. Whether you're into fashion or simply love artistic expression, there's something for everyone. I can't wait to see you there!"},
         { date: "2024-07-02", speaker: "Joshua Mathew", title: "My Perspective And Theories On Filmmaking", description: "As I pursue filmmaking, the quest for improvement leads to a deeper exploration of what 'improvement' truly means. I believe art and creativity involve much more than just technical knowledge; they arise from an intimate relationship between the creator and their psyche. Join me as I delve into my theories on these subjects, sharing insights, concepts, and behaviours I have observed throughout my journey in formulating stories." },
         { date: "2024-07-09", speaker: "Minhal Farrukh", title: "My Travel Journey", description: "Embark on a fun journey as I share stories from the places I have travelled! Join me as we explore vibrant cultures, breathtaking landscapes, and the unique experiences!" },
-        { date: "2024-07-16", speaker: "Allyson Steward", title: "TBD", description: "TBD" },
         { date: "2024-07-23", speaker: "Adam Bento", title: "Director's Take", description: "Discussing past, present, and future projects." },
         { date: "2024-07-30", speaker: "Shawn Foster", title: "TBD", description: "TBD" },
         { date: "2024-08-06", speaker: "Gunner Gunn", title: "TBD", description: "TBD" },
-        { date: "2024-08-13", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2024-08-20", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2024-08-27", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2024-08-13", speaker: "James Johnson", title: "TBD", description: "TBD" },
+        { date: "2024-08-20", speaker: "Allyson Steward", title: "The History of Fan Fiction", description: "TBD" },
+        { date: "2024-08-27", speaker: "LMS Migration Supports", title: "TBD", description: "TBD" },
         
         // Additional talks can be added here
     ];
