@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { date: "2024-08-06", speaker: "Gunner Gunn", title: "Character Design Is My Passion", description: "TBD" },
         { date: "2024-08-13", speaker: "James Johnson", title: "TBD", description: "TBD" },
         { date: "2024-08-20", speaker: "Allyson Steward", title: "The History of Fan Fiction", description: "TBD" },
-        { date: "2024-08-27", speaker: "LMS Migration Supports", title: "TBD", description: "TBD" },
+        { date: "2024-08-27", speaker: "Shiv Kushwala", title: "TBD", description: "TBD" },
         
         // Additional talks can be added here
     ];
