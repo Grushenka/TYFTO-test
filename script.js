@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { date: "2024-07-09", speaker: "Minhal Farrukh", title: "My Travel Journey", description: "Embark on a fun journey as I share stories from the places I have travelled! Join me as we explore vibrant cultures, breathtaking landscapes, and the unique experiences!" },
         { date: "2024-07-23", speaker: "Adam Bento", title: "Director's Take", description: "Discussing past, present, and future projects." },
         { date: "2024-07-30", speaker: "Shawn Foster", title: "How To Present", description: "TBD" },
-        { date: "2024-08-06", speaker: "Gunner Gunn", title: "Character Design Is My Passion", description: "TBD" },
+        { date: "2024-08-06", speaker: "Gunner Gunn", title: "Character Design Is My Passion", description: "Ever wonder what makes youre favourite cartoon characters so memorable? In this presentation I will go over the techniques artists use every day to design such iconic characters!" },
         { date: "2024-08-13", speaker: "James Johnson", title: "TBD", description: "TBD" },
         { date: "2024-08-20", speaker: "Allyson Steward", title: "The History of Fan Fiction", description: "TBD" },
         { date: "2024-08-27", speaker: "Shiv Kushwala", title: "TBD", description: "TBD" },
