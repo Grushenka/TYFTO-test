@@ -15,7 +15,7 @@ body {
 body.home {
   background-image: url('logo.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: tile;
   background-size: contain;
   background-color: #000;
   color: white;
