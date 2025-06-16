@@ -69,3 +69,28 @@ th:nth-child(2), td:nth-child(2) {
 th:nth-child(3), td:nth-child(3) {
     width: 20%;
 }
+
+.year-buttons {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.year-btn {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: none;
+    background-color: #ddd;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.year-btn:hover {
+    background-color: #bbb;
+}
+
+.year-btn.active {
+    background-color: #333;
+    color: white;
+}

@@ -6,19 +6,47 @@
     <title>Scheduled Talks</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1LUsC9DwuB/xW6TcPKNk2y1IcXlW+9U3GGTpafFpX+0xGvHkY6dJBpNK3F1D86KKKQKkKG4pQ8+vCtnv2o6BvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+          integrity="sha512-1LUsC9DwuB/xW6TcPKNk2y1IcXlW+9U3GGTpafFpX+0xGvHkY6dJBpNK3F1D86KKKQKkKG4pQ8+vCtnv2o6BvA==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             font-family: 'Lato', sans-serif;
         }
+
+        .year-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .year-btn {
+            margin: 0 5px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .year-btn.active {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+        }
     </style>
 </head>
+
 <body>
     <div class="content">
         <header>
             <h1>Scheduled TYFTO Talks</h1>
         </header>
+
+        <div class="year-buttons">
+            <button id="btn2024" class="year-btn active">2024</button>
+            <button id="btn2025" class="year-btn">2025</button>
+        </div>
+
         <input type="week" id="weekPicker">
+
         <table id="talksTable">
             <thead>
                 <tr>
@@ -29,16 +57,11 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Talks will be inserted here by JavaScript -->
-                <tr>
-                    <td>2024-05-21</td>
-                    <td>Deanna Grogan</td>
-                    <td><i class="fas fa-ship"></i> My Top Ten Tips on a Cruise</td>
-                    <td></td>
-                </tr>
+                <!-- Populated by JavaScript -->
             </tbody>
         </table>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
