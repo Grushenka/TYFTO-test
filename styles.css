@@ -121,6 +121,13 @@ nav a {
     border-radius: 4px 4px 0 0;
 }
 
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
 nav a:hover,
 nav a:focus,
 nav a[aria-current="page"] {
