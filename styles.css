@@ -98,26 +98,33 @@ th:nth-child(3), td:nth-child(3) {
 /* NEW NAVIGATION BAR STYLES */
 nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row; /* ensure horizontal layout */
+    justify-content: center;
+    gap: 30px; /* space between tabs */
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark bg */
     max-width: 800px;
     margin: 0 auto 30px auto;
-    padding: 0 10px;
+    padding: 10px 0;
+    border-radius: 8px;
 }
 
 nav a {
-    flex-grow: 1;
+    flex-grow: 0;
     text-align: center;
     text-decoration: none;
-    color: #333;
+    color: #fff; /* white text */
     font-weight: 600;
     font-size: 1.1rem;
-    padding: 10px 0;
-    transition: color 0.3s;
-    border-bottom: 2px solid transparent;
+    padding: 10px 15px;
+    transition: color 0.3s, border-bottom-color 0.3s;
+    border-bottom: 3px solid transparent;
+    border-radius: 4px 4px 0 0;
 }
 
 nav a:hover,
+nav a:focus,
 nav a[aria-current="page"] {
-    color: #007BFF;
-    border-bottom-color: #007BFF;
+    color: #00aaff; /* lighter blue on hover/focus/active */
+    border-bottom-color: #00aaff;
+    outline: none;
 }
