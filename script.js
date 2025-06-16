@@ -17,100 +17,56 @@ document.addEventListener('DOMContentLoaded', function () {
         // Add 2025 talks here as needed
     ];
 
-    let activeYear = "2024"; // Default to 2024
+    let selectedYear = 2024; // Default
 
-    function getStartOfWeek(weekString) {
-        const [year, week] = weekString.split('-W').map(Number);
-        const firstDay = new Date(year, 0, 1);
-        const daysOffset = (week - 1) * 7;
-        const weekStart = new Date(firstDay.setDate(firstDay.getDate() + daysOffset));
-        const diffToMonday = (weekStart.getDay() === 0 ? -6 : 1) - weekStart.getDay();
-        weekStart.setDate(weekStart.getDate() + diffToMonday);
-        return weekStart;
-    }
-
-    function getNextTalkDate() {
-        const today = new Date();
-        for (let talk of talks) {
-            const talkDate = new Date(talk.date);
-            if (!isNaN(talkDate) && talkDate >= today) {
-                return talk.date;
-            }
-        }
-        return null;
-    }
-
-    function renderTalks(talkList) {
+    function loadTalksByYear(year) {
         const tbody = document.getElementById('talksTable').getElementsByTagName('tbody')[0];
         tbody.innerHTML = '';
-        if (talkList.length === 0) {
+
+        const filteredTalks = talks.filter(talk => {
+            return new Date(talk.date).getFullYear() === year;
+        });
+
+        if (filteredTalks.length === 0) {
             const row = tbody.insertRow();
             const cell = row.insertCell();
             cell.colSpan = 4;
-            cell.innerText = "No talks available.";
+            cell.innerText = `No talks scheduled for ${year}.`;
             cell.style.textAlign = "center";
         } else {
-            talkList.forEach(talk => {
+            filteredTalks.forEach(talk => {
                 const row = tbody.insertRow();
                 row.insertCell().innerText = talk.date;
                 row.insertCell().innerText = talk.speaker;
                 const titleCell = row.insertCell();
-                titleCell.innerHTML = `<i class="fa ${talk.icon || ''}"></i> ${talk.title}`;
+                titleCell.innerHTML = `<i class="fa ${talk.icon || 'fa-comment'}"></i> ${talk.title}`;
                 row.insertCell().innerText = talk.description;
             });
         }
     }
 
-    function loadTalksByYear(year) {
-        const filtered = talks.filter(talk => talk.date.startsWith(year));
-        renderTalks(filtered);
-    }
-
-    function loadTalksForWeek() {
-        const selectedWeek = document.getElementById('weekPicker').value;
-        if (!selectedWeek) return loadTalksByYear(activeYear);
-
-        const startOfWeek = getStartOfWeek(selectedWeek);
-        const endOfWeek = new Date(startOfWeek);
-        endOfWeek.setDate(startOfWeek.getDate() + 6);
-
-        const filteredTalks = talks.filter(talk => {
-            const talkDate = new Date(talk.date);
-            return !isNaN(talkDate) &&
-                   talkDate >= startOfWeek &&
-                   talkDate <= endOfWeek &&
-                   talk.date.startsWith(activeYear);
+    function setActiveYearButton(year) {
+        document.querySelectorAll('.year-btn').forEach(btn => {
+            btn.classList.remove('active');
         });
 
-        renderTalks(filteredTalks);
+        document.getElementById(`btn${year}`).classList.add('active');
     }
 
-    function setActiveYear(year) {
-        activeYear = year;
-        document.querySelectorAll('.year-btn').forEach(btn => btn.classList.remove('active'));
-        const yearBtn = document.getElementById(`btn${year}`);
-        if (yearBtn) yearBtn.classList.add('active');
-        loadTalksForWeek(); // Reapply week filter with the new year
-    }
+    // Add listeners to year buttons
+    document.getElementById('btn2024').addEventListener('click', () => {
+        selectedYear = 2024;
+        setActiveYearButton(2024);
+        loadTalksByYear(2024);
+    });
 
-    // Button events
-    document.getElementById('btn2024').addEventListener('click', () => setActiveYear('2024'));
-    document.getElementById('btn2025').addEventListener('click', () => setActiveYear('2025'));
+    document.getElementById('btn2025').addEventListener('click', () => {
+        selectedYear = 2025;
+        setActiveYearButton(2025);
+        loadTalksByYear(2025);
+    });
 
-    // Week picker event
-    document.getElementById('weekPicker').addEventListener('change', loadTalksForWeek);
-
-    // Initialize on page load
-    const nextTalkDate = getNextTalkDate();
-    if (nextTalkDate) {
-        const nextDate = new Date(nextTalkDate);
-        const year = nextDate.getFullYear();
-        const jan1 = new Date(year, 0, 1);
-        const days = Math.floor((nextDate - jan1) / (1000 * 60 * 60 * 24));
-        const week = Math.ceil((days + jan1.getDay() + 1) / 7);
-        const weekStr = `${year}-W${String(week).padStart(2, '0')}`;
-        document.getElementById('weekPicker').value = weekStr;
-    }
-
-    setActiveYear(activeYear);
+    // Initial load
+    setActiveYearButton(selectedYear);
+    loadTalksByYear(selectedYear);
 });
