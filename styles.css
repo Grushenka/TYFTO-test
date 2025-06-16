@@ -1,26 +1,26 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url('gs.jpg'); /* Background image */
+    background-image: url('gs.jpg'); /* Add your background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #333; /* Readability */
+    color: #333; /* Ensuring good readability */
     margin: 0;
     padding: 20px;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Prevent overflow */
+    height: 100vh; /* This will make sure the background covers the full height of the viewport */
+    overflow: hidden; /* Prevents overflow issues */
 }
 
 .content {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content for readability */
     margin: auto;
     padding: 20px;
     border-radius: 8px;
     width: 80%;
     max-width: 960px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    max-height: calc(100vh - 40px); /* Fits viewport */
-    overflow-y: auto; /* Scroll inside content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    max-height: calc(100vh - 40px); /* Adjusts to viewport height */
+    overflow-y: auto; /* Allows scrolling within the content area */
 }
 
 header {
@@ -49,7 +49,15 @@ th {
     background-color: #f2f2f2;
 }
 
-/* Column widths */
+input[type="week"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+/* Adjust column widths */
 th:nth-child(1), td:nth-child(1) {
     width: 12%;
 }
@@ -60,14 +68,6 @@ th:nth-child(2), td:nth-child(2) {
 
 th:nth-child(3), td:nth-child(3) {
     width: 20%;
-}
-
-input[type="week"] {
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    width: 20%;
-    margin-bottom: 20px;
 }
 
 .year-buttons {
@@ -83,7 +83,7 @@ input[type="week"] {
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .year-btn:hover {
@@ -93,4 +93,31 @@ input[type="week"] {
 .year-btn.active {
     background-color: #333;
     color: white;
+}
+
+/* NEW NAVIGATION BAR STYLES */
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    padding: 0 10px;
+}
+
+nav a {
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    transition: color 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: #007BFF;
+    border-bottom-color: #007BFF;
 }
