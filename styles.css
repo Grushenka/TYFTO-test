@@ -105,6 +105,13 @@ nav.navbar {
   margin-bottom: 15px;
 }
 
+.nav-logo img {
+  height: 40px;
+  width: auto;
+  display: inline-block;
+}
+
+
 .navbar .nav-logo a {
   display: flex;
   align-items: center;
