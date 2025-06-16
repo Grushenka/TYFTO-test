@@ -1,121 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="./images/bulb.jpg" type="image/x-icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-        <title>TYFTO</title>
-    
-    <style>
-        .topnav {
-            overflow: auto;
-            float: none;
-            text-align: center;
-            padding: 10px 12px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black
-        }
-/* Add a color to the active/current link */
-    .topnav a.active {
-         background-color: #4CAF50;
-        color: white;
-        }
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Logistics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
     body {
-        background-color: linen;
-    }    
-
-    h1 {
-        text-align: center;
-        text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
     }
-
-    h2 {
-        margin: 30px 10px 5px 100px;
+    nav.navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
     }
-    /* ul {
-        margin: 50px 300px 100px 500px;
-    } */
-
-    li{
-        padding: 1%;
+    nav.navbar .nav-logo {
+      color: white;
+      font-weight: 700;
+      font-size: 1.5rem;
+      user-select: none;
     }
-
-    .footer{
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 25px;
-        background-color: rgba(255, 180, 71);
-        color: white;
-        text-align: center;
-        
+    nav.navbar ul.nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
     }
-
-    a{
-        padding: 10px;
+    nav.navbar ul.nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      display: block;
     }
-
-    /* .log {
-        background-color: beige;
-        border: 10px solid rgb(81, 181, 247);
-        padding: 20px;
-        margin: 50px 300px 100px 300px;
-    } */
-    ul {
-  /* background: #bed8f1; */
-  border-left: 5px solid red;
-  background: #cce5ff;
-  padding-left: 30px;
-  margin-left: 100px;
-  padding-right: 100px;
-  margin-right: 100px;
-}
-
-   
-    </style>
-
+    nav.navbar ul.nav-links li a:hover,
+    nav.navbar ul.nav-links li a[aria-current='page'] {
+      background-color: #007bff;
+      color: white;
+    }
+    .content {
+      max-width: 900px;
+      margin: auto;
+    }
+  </style>
 </head>
-    <body>
-        <h1>TYFTO Club</h1> 
-        
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">TYFTO</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="logistics.html" aria-current="page">Logistics</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<!-- Load an icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="schedule.html">Schedule</a>
-  <a href="logistics.html" aria-current="page">Logistics</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-
-
- <h2>The Logistics</h2>
-
- <div class="log">   
- <ul>
-    <li>A speaker will present and discuss a topic at each meeting. The talk can be interactive and/or just have a Q&A at the end.</li>  
-    <li>Speakers will be given at least 1 month's notice so that they can prepare their talk. They will also provide the coordinator with an abstract closer to the date of their presentation so that everyone can have an idea about the talk in advance.</li>
-    <li>Credit should be given when applicable.</li>
-    <li>Talks are typically held in the basement conference. In the summer, they may be held outside.</li>
-    <li>Resources can be provided to the speaker, if needed.</li>
- </ul>
- </div>
-
-  <div class="footer">
-    <a href="https://www.youtube.com/channel/UCeQKg_LXV4fF7M9x8RvA7zQ/videos" target="_blank"><i class="fa fa-2x fa-youtube-play"></i></a> 
-    <a href="#"><i class="fa fa-2x fa-facebook-official"></i></a>
-    <a href="mailto:clubtyfto@gmail.com"><i class="fa fa-2x fa-envelope"></i></a>
- </div>
-
-    </body>
+  <div class="content">
+    <h1>Logistics</h1>
+    <p>Logistical information about the TYFTO talks and events will go here.</p>
+  </div>
+</body>
 </html>

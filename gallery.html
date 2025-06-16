@@ -3,39 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scheduled Talks</title>
+  <title>Gallery</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1LUsC9DwuB/xW6TcPKNk2y1IcXlW+9U3GGTpafFpX+0xGvHkY6dJBpNK3F1D86KKKQKkKG4pQ8+vCtnv2o6BvA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
     }
-
-    .year-buttons {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .year-btn {
-      margin: 0 5px;
-      padding: 8px 16px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .year-btn.active {
-      background-color: #007bff;
-      color: white;
-      border: none;
-    }
-
     nav.navbar {
       background-color: #333;
       padding: 10px 20px;
@@ -44,14 +22,12 @@
       justify-content: space-between;
       margin-bottom: 15px;
     }
-
     nav.navbar .nav-logo {
       color: white;
       font-weight: 700;
       font-size: 1.5rem;
       user-select: none;
     }
-
     nav.navbar ul.nav-links {
       list-style: none;
       margin: 0;
@@ -59,7 +35,6 @@
       display: flex;
       gap: 20px;
     }
-
     nav.navbar ul.nav-links li a {
       color: white;
       text-decoration: none;
@@ -69,11 +44,14 @@
       transition: background-color 0.3s ease;
       display: block;
     }
-
     nav.navbar ul.nav-links li a:hover,
     nav.navbar ul.nav-links li a[aria-current='page'] {
       background-color: #007bff;
       color: white;
+    }
+    .content {
+      max-width: 900px;
+      margin: auto;
     }
   </style>
 </head>
@@ -82,40 +60,16 @@
     <div class="nav-logo">TYFTO</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="schedule.html" aria-current="page">Schedule</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
       <li><a href="logistics.html">Logistics</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="gallery.html" aria-current="page">Gallery</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <div class="content">
-    <header>
-      <h1>Scheduled TYFTO Talks</h1>
-    </header>
-
-    <div class="year-buttons">
-      <button id="btn2024" class="year-btn active">2024</button>
-      <button id="btn2025" class="year-btn">2025</button>
-    </div>
-
-    <input type="week" id="weekPicker" />
-
-    <table id="talksTable">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Speaker</th>
-          <th>Title</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Populated by JavaScript -->
-      </tbody>
-    </table>
+    <h1>Gallery</h1>
+    <p>Gallery images and media will be displayed here.</p>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>

@@ -1,141 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="./images/bulb.jpg" type="image/x-icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-        <title>TYFTO</title>
-    
-    <style>
-        .topnav {
-            overflow: auto;
-            float: none;
-            text-align: center;
-            padding: 10px 12px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black
-        }
-/* Add a color to the active/current link */
-    .topnav a.active {
-         background-color: #4CAF50;
-        color: white;
-        }
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
     body {
-        background-color: linen;
-    }    
-
-    h1 {
-        text-align: center;
-        text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
     }
-    h2 {
-        text-align: center;
+    nav.navbar {
+      background-color: #333;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
     }
-
-    p {
-        margin: 5px 450px 0px 1025px;
-        padding: 15px;
-        }
-   
-    .footer{
-        position: scroll;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 25px;
-        background-color: rgba(255, 180, 71);
-        color: white;
-        text-align: center;
-        
+    nav.navbar .nav-logo {
+      color: white;
+      font-weight: 700;
+      font-size: 1.5rem;
+      user-select: none;
     }
-
-    a{
-        padding: 10px;
+    nav.navbar ul.nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
     }
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color:#79c409;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: firebrick;
-}
-
-.container {
-  background-attachment: scroll;
-  margin-bottom: 5%;  
-  margin-left: 20%;
-  border-radius: 1%;
-  background-color: rgb(34, 211, 255);
-  padding: 20px;
-  width: 60%;
-}
-</style>
-
+    nav.navbar ul.nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      display: block;
+    }
+    nav.navbar ul.nav-links li a:hover,
+    nav.navbar ul.nav-links li a[aria-current='page'] {
+      background-color: #007bff;
+      color: white;
+    }
+    .content {
+      max-width: 900px;
+      margin: auto;
+    }
+  </style>
 </head>
-    <body>
-     <h1>TYFTO Club</h1> 
-        
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">TYFTO</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="logistics.html">Logistics</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="schedule.html">Schedule</a>
-  <a href="logistics.html">Logistics</a>
-  <a href="contact.html" aria-current="page">Contact</a>
-</nav>
-
-
-<h2>Contact Form</h1>
-
-    <div class="container">
-        <form action="/action_page.php">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
-          <label for="Email">Email Address</label>
-          <input type="text" id="Email" >
-
-
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
-        </form>
-      </div>
-
-
-  <div class="footer">
-    <a href="https://www.youtube.com/channel/UCeQKg_LXV4fF7M9x8RvA7zQ/videos" target="_blank"><i class="fa fa-2x fa-youtube-play"></i></a> 
-    <a href="#"><i class="fa fa-2x fa-facebook-official"></i></a>
-    <a href="mailto:clubtyfto@gmail.com"><i class="fa fa-2x fa-envelope"></i></a>
-</div>
-
-    </body>
+  <div class="content">
+    <h1>Contact</h1>
+    <p>Contact information and form will go here.</p>
+  </div>
+</body>
 </html>
