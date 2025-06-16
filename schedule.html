@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Scheduled Talks</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
-          integrity="sha512-1LUsC9DwuB/xW6TcPKNk2y1IcXlW+9U3GGTpafFpX+0xGvHkY6dJBpNK3F1D86KKKQKkKG4pQ8+vCtnv2o6BvA==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1LUsC9DwuB/xW6TcPKNk2y1IcXlW+9U3GGTpafFpX+0xGvHkY6dJBpNK3F1D86KKKQKkKG4pQ8+vCtnv2o6BvA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -31,10 +35,60 @@
             color: white;
             border: none;
         }
+
+        /* NAVIGATION BAR CSS */
+        nav.navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav.navbar .nav-logo {
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            user-select: none;
+        }
+
+        nav.navbar ul.nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav.navbar ul.nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav.navbar ul.nav-links li a:hover,
+        nav.navbar ul.nav-links li a[aria-current="page"] {
+            background-color: #007BFF;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="nav-logo">TYFTO</div>
+        <ul class="nav-links">
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="index.html" aria-current="page">Schedule</a></li>
+            <li><a href="logistics.html">Logistics</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <div class="content">
         <header>
             <h1>Scheduled TYFTO Talks</h1>
@@ -45,7 +99,7 @@
             <button id="btn2025" class="year-btn">2025</button>
         </div>
 
-        <input type="week" id="weekPicker">
+        <input type="week" id="weekPicker" />
 
         <table id="talksTable">
             <thead>
