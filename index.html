@@ -5,48 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Welcome to TYFTO</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
   <style>
+    /* Nav bar styling (consistent with schedule.html) */
     body {
       font-family: 'Poppins', sans-serif;
       background-image: url('gs.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      color: white;
+      color: white; /* Make all text white on index */
       margin: 0;
-      padding: 20px;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .content {
-      background-color: rgba(255, 255, 255, 0.2);
-      margin: auto;
-      padding: 20px;
-      border-radius: 8px;
-      width: 80%;
-      max-width: 960px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      max-height: calc(100vh - 40px);
-      overflow-y: auto;
-      color: white;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      font-weight: 700;
-      margin: 0 0 10px;
-      color: white;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.5;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     nav.navbar {
@@ -85,6 +57,34 @@
     nav.navbar ul.nav-links li a:hover,
     nav.navbar ul.nav-links li a[aria-current='page'] {
       background-color: #007bff;
+      color: white;
+    }
+
+    /* Content container */
+    .content {
+      background-color: rgba(0, 0, 0, 0.5);
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+      color: white; /* ensure text inside is white */
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-weight: 700;
+      margin: 0 0 10px;
+      color: white;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5;
       color: white;
     }
   </style>
