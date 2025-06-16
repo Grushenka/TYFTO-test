@@ -18,6 +18,34 @@
       font-family: 'Poppins', sans-serif;
     }
 
+    /* Background for schedule page only */
+    body.schedule {
+      background-image: url('logo.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-color: #000; /* fallback */
+      color: white;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+     .content {
+      background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark bg */
+      margin: auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 960px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      color: white;
+    }
+
     .year-buttons {
       text-align: center;
       margin: 20px 0;
@@ -77,14 +105,9 @@
     }
   </style>
 </head>
-<body>
+<body class="schedule">
   <nav class="navbar">
-    <div class="nav-logo">
-  <a href="index.html">
-    <img src="logo.png" alt="TYFTO Logo">
-    <span>TYFTO</span>
-  </a>
-</div>
+    <div class="nav-logo">TYFTO</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="schedule.html" aria-current="page">Schedule</a></li>
@@ -96,7 +119,7 @@
 
   <div class="content">
     <header>
-      <h1>Scheduled TYFTO Talks</h1>
+      <h1>Scheduled Talks</h1>
     </header>
 
     <div class="year-buttons">

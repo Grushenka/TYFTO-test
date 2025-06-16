@@ -15,12 +15,20 @@ body {
 body.home {
   background-image: url('logo.png');
   background-repeat: no-repeat;
-  background-position: tile;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
   background-color: #000;
   color: white;
 }
 
+body.schedule {
+  background-image: url('logo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000;
+  color: white;
+}
 .content {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
@@ -34,6 +42,7 @@ body.home {
   overflow-y: auto;
 }
 
+
 header {
   text-align: center;
   margin-bottom: 20px;
@@ -42,7 +51,9 @@ header {
 header h1 {
   font-weight: 700;
   margin: 0;
+
 }
+
 
 table {
   width: 100%;
@@ -57,7 +68,7 @@ th, td {
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #000;
 }
 
 input[type="week"] {
