@@ -128,6 +128,12 @@ nav a {
   color: white;
 }
 
+.nav-logo img {
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 nav a:hover,
 nav a:focus,
 nav a[aria-current="page"] {
