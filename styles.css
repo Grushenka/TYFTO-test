@@ -18,11 +18,12 @@ body.home {
   background-position: center;
   background-size: contain;
   background-color: #000;
-  color: #333;
+  color: white;
 }
 
 .content {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
   margin: auto;
   padding: 20px;
   border-radius: 8px;
