@@ -33,7 +33,7 @@ body.home {
   justify-content: flex-center;
   align-items: center;
   padding: 100px;
-  text-align: center;
+  text-align: left;
 }
 
 /* Nav styles */
@@ -106,10 +106,19 @@ body.schedule {
   overflow-y: auto;
 }
 
-.main-content p {
-  font-size: 20px; /* or use px like 20px */
-  padding-top: 1px;
+.main-content {
+  text-align: left; /* ensures left alignment */
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 15vh; /* optional, pushes it down a bit from the top */
+  font-size: 1.2rem; /* increases font size for all inside */
+  line-height: 1.6;
 }
+
+.main-content p {
+  margin-bottom: 1.2em;
+}
+
 
 header {
   text-align: center;
