@@ -3,31 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Logistics</title>
+  <title>Logistics | TYFTO Talks</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1LUsC9DwuB/xW6TcPKNk2y1IcXlW+9U3GGTpafFpX+0xGvHkY6dJBpNK3F1D86KKKQKkKG4pQ8+vCtnv2o6BvA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <style>
-    body {
+    body.logistics {
       font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background-image: url('logo.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-color: #000;
+      color: white;
+      min-height: 100vh;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
     }
+
+    .content {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      width: 85%;
+      max-width: 800px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      color: #00bfff;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section ul {
+      list-style: disc;
+      margin-left: 20px;
+      padding-left: 10px;
+    }
+
     nav.navbar {
       background-color: #333;
       padding: 10px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 15px;
     }
+
     nav.navbar .nav-logo {
       color: white;
       font-weight: 700;
       font-size: 1.5rem;
-      user-select: none;
     }
+
     nav.navbar ul.nav-links {
       list-style: none;
       margin: 0;
@@ -35,6 +86,7 @@
       display: flex;
       gap: 20px;
     }
+
     nav.navbar ul.nav-links li a {
       color: white;
       text-decoration: none;
@@ -44,25 +96,17 @@
       transition: background-color 0.3s ease;
       display: block;
     }
+
     nav.navbar ul.nav-links li a:hover,
     nav.navbar ul.nav-links li a[aria-current='page'] {
       background-color: #007bff;
       color: white;
     }
-    .content {
-      max-width: 900px;
-      margin: auto;
-    }
   </style>
 </head>
-<body>
+<body class="logistics">
   <nav class="navbar">
-    <div class="nav-logo">
-  <a href="index.html">
-    <img src="logo.png" alt="TYFTO Logo">
-    <span>TYFTO</span>
-  </a>
-</div>
+    <div class="nav-logo">TYFTO</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="schedule.html">Schedule</a></li>
@@ -73,8 +117,48 @@
   </nav>
 
   <div class="content">
-    <h1>Logistics</h1>
-    <p>Logistical information about the TYFTO talks and events will go here.</p>
+    <h1>Logistics Overview</h1>
+
+    <div class="section">
+      <h2><i class="fas fa-calendar-check"></i> Scheduling</h2>
+      <ul>
+        <li>The interested speaker contacts the series coordinator (Grushenka).</li>
+        <li>A date will be agreed upon for the talk, and the speaker will be officially scheduled.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-pen"></i> Blurb Submission</h2>
+      <ul>
+        <li>Speakers provide a brief description of their talk as soon as possible for promotion.</li>
+        <li>Deadline: One week prior to the scheduled talk.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-chalkboard-teacher"></i> Talk Format</h2>
+      <ul>
+        <li>Each talk is 20 minutes long and delivered in person.</li>
+        <li>Speakers may format their presentation however they prefer.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-question-circle"></i> Q&amp;A</h2>
+      <ul>
+        <li>10 minutes are allotted after each talk for audience questions and engagement.</li>
+        <li>Total session time: 30 minutes.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-lightbulb"></i> Topic Guidelines</h2>
+      <ul>
+        <li>Talks do not need to be work-related.</li>
+        <li>Speakers are encouraged to share personal interests.</li>
+        <li>Snacks may be provided.</li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
