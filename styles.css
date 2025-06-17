@@ -32,7 +32,7 @@ body.home {
   flex-direction: column;
   justify-content: flex-center;
   align-items: center;
-  padding: 130px;
+  padding: 100px;
   text-align: center;
 }
 
@@ -108,6 +108,7 @@ body.schedule {
 
 .main-content p {
   font-size: 20px; /* or use px like 20px */
+  padding-top: 1px;
 }
 
 header {
