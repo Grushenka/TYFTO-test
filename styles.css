@@ -110,7 +110,7 @@ body.schedule {
   text-align: left; /* ensures left alignment */
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 15vh; /* optional, pushes it down a bit from the top */
+  padding-top: 10vh; /* optional, pushes it down a bit from the top */
   font-size: 1.2rem; /* increases font size for all inside */
   line-height: 1.6;
 }
