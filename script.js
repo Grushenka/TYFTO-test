@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { date: "2024-08-06", speaker: "Gunner Gunn", title: "Character Design Is My Passion", description: "Ever wonder what makes your favourite cartoon characters so memorable?..." },
         { date: "2024-08-13", speaker: "James Johnson", title: "So what's that YouTube stuff you do?", description: "I will be talking about what I’ve made on YouTube and what Games I’ve made for them..." },
         { date: "2025-06-25", speaker: "Ashe Night", title: "How to Use a Mac", description: "Want to learn something about your favourite computer named after a fruit? Well you're in luck, because I'm about to show you just how much you can do in our little Orchard, and with your own 🍎 gear at home." },
-        { date: "2025-06-30", speaker: "Allyson Steward", title: "TBD", description: "TBD" }
+        { date: "2025-06-30", speaker: "Allyson Steward", title: "How to Revive the MCU", description: "We will examine what makes the MCU valuable and explore the opportunities Hollywood and Disney are overlooking." }
     ];
 
     const weekPicker = document.getElementById('weekPicker');
