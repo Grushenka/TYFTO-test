@@ -1,0 +1,245 @@
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.patches import Wedge, Circle, Patch
+
+# -----------------------------
+# CONFIG
+# -----------------------------
+services = [
+    "Digital Learning Environment Administration",
+    "Digital Media Production",
+    "Digital Content Development",
+    "Consultancy",
+    "Literacies",
+    "Thought Leadership",
+    "Accessibility"
+]
+
+audiences = [
+    "Researchers",
+    "Staff",
+    "Instructors",
+    "Students"
+]
+
+audience_colors = {
+    "Students": "#A29BFE",
+    "Instructors": "#8175C9",
+    "Staff": "#6C5BA6",
+    "Researchers": "#5A4986",
+}
+
+# -----------------------------
+# DATA: (before, after)
+# -----------------------------
+data = {
+    "Digital Learning Environment Administration": {
+        "Staff": (True, True),
+        "Instructors": (True, True),
+        "Students": (False, False),
+        "Researchers": (False, False)
+    },
+    "Digital Media Production": {
+        "Staff": (False, True),
+        "Instructors": (True, True),
+        "Students": (False, False),
+        "Researchers": (False, True)
+    },
+    "Digital Content Development": {
+        "Staff": (False, True),
+        "Instructors": (True, True),
+        "Students": (False, False),
+        "Researchers": (False, True)
+    },
+    "Consultancy": {a: (False, True) for a in audiences},
+    "Literacies": {a: (False, True) for a in audiences},
+    "Thought Leadership": {a: (False, True) for a in audiences},
+    "Accessibility": {a: (False, True) for a in audiences}
+}
+
+# -----------------------------
+# DRAW SETUP
+# -----------------------------
+fig, ax = plt.subplots(figsize=(14, 14))
+ax.set_aspect("equal")
+ax.axis("off")
+
+num_services = len(services)
+service_span = 360.0 / num_services
+ring_width = 0.12
+ring_padding = 0.02
+outer_radius = 1.0
+inner_radius = 0.3
+radial_length = outer_radius + 0.35
+
+# -----------------------------
+# DRAW DONUT SLICES
+# -----------------------------
+for s_i, service in enumerate(services):
+    service_start = s_i * service_span
+    service_end = service_start + service_span
+
+    # Draw dotted line at the **start of the service** to separate services
+    rad = np.deg2rad(service_start)
+    line_x = radial_length * np.cos(rad)
+    line_y = radial_length * np.sin(rad)
+    ax.plot([0, line_x], [0, line_y], color="black", lw=1, linestyle="--")
+
+    # Split service slice into BEFORE and AFTER fractions
+    before_span = service_span * 0.49
+    after_span = service_span * 0.49
+
+    for a_i, audience in enumerate(audiences):
+        r_outer = outer_radius - a_i * (ring_width + ring_padding)
+        before, after = data[service][audience]
+
+        # BEFORE wedge
+        if before:
+            ax.add_patch(
+                Wedge(
+                    (0, 0),
+                    r_outer,
+                    service_start,
+                    service_start + before_span,
+                    width=ring_width,
+                    facecolor=audience_colors[audience],
+                    edgecolor="white",
+                    zorder=1
+                )
+            )
+
+        # AFTER wedge
+        if after:
+            ax.add_patch(
+                Wedge(
+                    (0, 0),
+                    r_outer,
+                    service_end - after_span,
+                    service_end,
+                    width=ring_width,
+                    facecolor=audience_colors[audience],
+                    hatch="//",
+                    edgecolor="gray",
+                    linewidth=0.5,
+                    zorder=2
+                )
+            )
+
+# -----------------------------
+# CENTER CIRCLE
+# -----------------------------
+ax.add_patch(
+    Circle(
+        (0, 0),
+        inner_radius,
+        edgecolor="gray",
+        facecolor="none",
+        lw=1.5,
+        zorder=10
+    )
+)
+
+# -----------------------------
+# BEFORE / AFTER LABELS
+# -----------------------------
+label_r = outer_radius + 0.10
+for s_i in range(num_services):
+    service_start = s_i * service_span
+    service_end = service_start + service_span
+
+    before_span = service_span * 0.49
+    after_span = service_span * 0.49
+
+    angle_before = service_start + before_span / 2
+    angle_after = service_end - after_span / 2
+
+    ax.text(
+        label_r * np.cos(np.deg2rad(angle_before)),
+        label_r * np.sin(np.deg2rad(angle_before)),
+        "BEFORE", ha="center", va="center", fontsize=9, style="italic"
+    )
+    ax.text(
+        label_r * np.cos(np.deg2rad(angle_after)),
+        label_r * np.sin(np.deg2rad(angle_after)),
+        "AFTER", ha="center", va="center", fontsize=9, style="italic"
+    )
+
+# -----------------------------
+# AUDIENCE LABELS INSIDE RINGS
+# -----------------------------
+for a_i, audience in enumerate(audiences):
+    r = outer_radius - a_i * (ring_width + ring_padding) - ring_width / 2
+    ax.text(0, r, audience, ha="center", va="center", fontsize=10, fontweight="bold")
+
+# -----------------------------
+# SERVICE LABELS (per-service angle and radius)
+# -----------------------------
+angle_offsets_labels = {0: -10, 1: 5, 2: 5, 3: 5, 4: -5, 5: -5, 6: -10}
+label_r_radius = {
+    0: outer_radius + 0.50,
+    1: outer_radius + 0.33,
+    2: outer_radius + 0.48,
+    3: outer_radius + 0.25,
+    4: outer_radius + 0.33,
+    5: outer_radius + 0.25,
+    6: outer_radius + 0.35
+}
+
+flip_indices = [2, 3, 5, 6]
+
+for s_i, service in enumerate(services):
+    service_start = s_i * service_span
+    mid = service_start + service_span / 2 + angle_offsets_labels.get(s_i, 0)
+    angle_rad = np.deg2rad(mid)
+
+    # Use per-service radius
+    r = label_r_radius[s_i]
+    x = r * np.cos(angle_rad)
+    y = r * np.sin(angle_rad)
+
+    # Wrap long labels
+    if len(service) > 30:
+        words = service.split()
+        mid_point = len(words) // 2
+        service_text = " ".join(words[:mid_point]) + "\n" + " ".join(words[mid_point:])
+    else:
+        service_text = service
+
+    rotation = 0 if s_i in flip_indices else 0
+    if -10 < mid < 10 or 350 < mid < 370:
+        ha = "left"
+    elif 170 < mid < 190:
+        ha = "right"
+    else:
+        ha = "center"
+
+    if 80 < mid < 100:
+        va = "bottom"
+    elif 260 < mid < 280:
+        va = "top"
+    else:
+        va = "center"
+
+    ax.text(
+        x, y,
+        service_text,
+        ha=ha,
+        va=va,
+        fontsize=11,
+        fontweight="bold",
+        rotation=rotation,
+        rotation_mode="anchor",
+        bbox=dict(boxstyle="round,pad=0.4", facecolor="white", edgecolor="gray", alpha=0.9)
+    )
+
+# -----------------------------
+# LEGEND
+# -----------------------------
+legend_handles = [Patch(facecolor=audience_colors[a], edgecolor="white", label=a) for a in audiences]
+legend_handles.append(Patch(facecolor=audience_colors[audiences[0]], edgecolor="gray", hatch='//', label="Accessibility (pattern overlay)"))
+
+ax.legend(handles=legend_handles, title="Audiences", loc="upper right", bbox_to_anchor=(1.5, 1.0))
+
+plt.title("Services/Areas of Excellence Reach by Audience — Before and After", fontsize=14, pad=5)
+plt.tight_layout()
+plt.show()

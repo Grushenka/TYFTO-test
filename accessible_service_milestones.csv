@@ -1,0 +1,23 @@
+Service,Current_Years,Future_Years,Total_Years,Visual_Pattern,Milestone_Type,Milestone,Status,Accessibility_Note
+Digital Content Development,2,2,4,Blue diagonal lines (2yr) + Orange dots (2yr),SUMMARY,Total: 4 milestones,Overview,Service overview with visual pattern description
+Digital Content Development,2,2,4,Blue with diagonal lines (///),COMPLETED,Content Strategy Framework,Completed,Represented by checkmark (✓) in blue section
+Digital Content Development,2,2,4,Blue with diagonal lines (///),COMPLETED,Video Production Pipeline,Completed,Represented by checkmark (✓) in blue section
+Digital Content Development,2,2,4,Orange with dots (...),UPCOMING,AI Content Tools,Upcoming,Represented by arrow (→) in orange section
+Digital Content Development,2,2,4,Orange with dots (...),UPCOMING,Interactive Media Platform,Upcoming,Represented by arrow (→) in orange section
+LMS Admin,3,2,5,Blue diagonal lines (3yr) + Orange dots (2yr),SUMMARY,Total: 5 milestones,Overview,Service overview with visual pattern description
+LMS Admin,3,2,5,Blue with diagonal lines (///),COMPLETED,Platform Migration,Completed,Represented by checkmark (✓) in blue section
+LMS Admin,3,2,5,Blue with diagonal lines (///),COMPLETED,User Management System,Completed,Represented by checkmark (✓) in blue section
+LMS Admin,3,2,5,Blue with diagonal lines (///),COMPLETED,Analytics Dashboard,Completed,Represented by checkmark (✓) in blue section
+LMS Admin,3,2,5,Orange with dots (...),UPCOMING,Mobile App Integration,Upcoming,Represented by arrow (→) in orange section
+LMS Admin,3,2,5,Orange with dots (...),UPCOMING,Advanced Reporting Suite,Upcoming,Represented by arrow (→) in orange section
+Accessibility,1,4,5,Blue diagonal lines (1yr) + Orange dots (4yr),SUMMARY,Total: 5 milestones,Overview,Service overview with visual pattern description
+Accessibility,1,4,5,Blue with diagonal lines (///),COMPLETED,WCAG 2.1 AA Compliance,Completed,Represented by checkmark (✓) in blue section
+Accessibility,1,4,5,Orange with dots (...),UPCOMING,Screen Reader Optimization,Upcoming,Represented by arrow (→) in orange section
+Accessibility,1,4,5,Orange with dots (...),UPCOMING,Voice Navigation,Upcoming,Represented by arrow (→) in orange section
+Accessibility,1,4,5,Orange with dots (...),UPCOMING,Cognitive Load Assessment,Upcoming,Represented by arrow (→) in orange section
+Accessibility,1,4,5,Orange with dots (...),UPCOMING,Universal Design Standards,Upcoming,Represented by arrow (→) in orange section
+Data Vertical,0,4,4,Blue diagonal lines (0yr) + Orange dots (4yr),SUMMARY,Total: 4 milestones,Overview,Service overview with visual pattern description
+Data Vertical,0,4,4,Orange with dots (...),UPCOMING,Data Architecture Design,Upcoming,Represented by arrow (→) in orange section
+Data Vertical,0,4,4,Orange with dots (...),UPCOMING,ETL Pipeline Setup,Upcoming,Represented by arrow (→) in orange section
+Data Vertical,0,4,4,Orange with dots (...),UPCOMING,Analytics Platform,Upcoming,Represented by arrow (→) in orange section
+Data Vertical,0,4,4,Orange with dots (...),UPCOMING,Predictive Modeling System,Upcoming,Represented by arrow (→) in orange section

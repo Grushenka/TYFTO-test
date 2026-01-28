@@ -1,0 +1,19 @@
+Service,Current_Years,Future_Years,Total_Years,Milestone_Order,Milestone,Status
+Digital Content Development,2,2,4,1,Content Strategy Framework,Completed
+Digital Content Development,2,2,4,2,Video Production Pipeline,Completed
+Digital Content Development,2,2,4,1,AI Content Tools,Upcoming
+Digital Content Development,2,2,4,2,Interactive Media Platform,Upcoming
+LMS Admin,3,2,5,1,Platform Migration,Completed
+LMS Admin,3,2,5,2,User Management System,Completed
+LMS Admin,3,2,5,3,Analytics Dashboard,Completed
+LMS Admin,3,2,5,1,Mobile App Integration,Upcoming
+LMS Admin,3,2,5,2,Advanced Reporting Suite,Upcoming
+Accessibility,1,4,5,1,WCAG 2.1 AA Compliance,Completed
+Accessibility,1,4,5,1,Screen Reader Optimization,Upcoming
+Accessibility,1,4,5,2,Voice Navigation,Upcoming
+Accessibility,1,4,5,3,Cognitive Load Assessment,Upcoming
+Accessibility,1,4,5,4,Universal Design Standards,Upcoming
+Data Vertical,0,4,4,1,Data Architecture Design,Upcoming
+Data Vertical,0,4,4,2,ETL Pipeline Setup,Upcoming
+Data Vertical,0,4,4,3,Analytics Platform,Upcoming
+Data Vertical,0,4,4,4,Predictive Modeling System,Upcoming

@@ -4,15 +4,16 @@ document.addEventListener('DOMContentLoaded', function () {
         { date: "2024-06-04", speaker: "Sam Wagter", title: "The Elm Family", description: "Do you love stories with action, drama, romance, death, betrayal, crime and real family connections? Do you love complicated world building and character development with exciting plot twists? Do you love the Sims 4? Join us Tuesday June 4th for the Elm Family Lore presentation – you’ll pay for the full seat, but YOU’LL ONLY NEED THE EDGE (edge…edge…edge…)", icon: "fa-users" },
         { date: "2024-06-11", speaker: "Asad Awawdeh", title: "My $25,000 Mistake", description: "Ever wonder how a simple deadline disaster can cost someone an easy opportunity at $25,000? Find out the story about my career, the roots behind it, and how coming up short in one of its most important moments taught me some of the most valuable lessons I've learned. I'll talk about how my mistake came to be, where I went wrong, the aftermath, and how it's completely changed the way I have approached my professional and personal relationships since; hope to see you there!" },
         { date: "2024-06-18", speaker: "Kareem Baassiri", title: "Discovering Passions Through Travel", description: "Ever wondered what drives us to travel and explore the world, uncovering new passions along the way? Join me on June 18th for a heartfelt journey through travel and bachata..." },
-        { date: "2024-06-25", speaker: "Isabella Villaroman", title: "Fashion Lookbooks", description: "Interested in seeing stylish fashion, creative photography, intriguing sets, and captivating storytelling?..." },
-        { date: "2024-07-02", speaker: "Joshua Mathew", title: "My Perspective And Theories On Filmmaking", description: "As I pursue filmmaking, the quest for improvement leads to a deeper exploration of what 'improvement' truly means..." },
-        { date: "2024-07-09", speaker: "Minhal Farrukh", title: "My Travel Journey", description: "Embark on a fun journey as I share stories from the places I have travelled!..." },
+        { date: "2024-06-25", speaker: "Isabella Villaroman", title: "Fashion Lookbooks", description: "Interested in seeing stylish fashion, creative photography, intriguing sets, and captivating storytelling? Join me on Tuesday, June 25th for an exciting journey through my three-year exploration in fashion. I'll be showcasing four distinctive lookbooks I've contributed to, revealing insights into the creative process, behind-the-scenes content, and intriguing fun facts. Whether you're into fashion or simply love artistic expression, there's something for everyone. I can't wait to see you there! in seeing stylish fashion, creative photography, intriguing sets, and captivating storytelling?..." },
+        { date: "2024-07-02", speaker: "Joshua Mathew", title: "My Perspective And Theories On Filmmaking", description: "As I pursue filmmaking, the quest for improvement leads to a deeper exploration of what 'improvement' truly means. I believe art and creativity involve much more than just technical knowledge; they arise from an intimate relationship between the creator and their psyche. Join me as I delve into my theories on these subjects, sharing insights, concepts, and behaviours I have observed throughout my journey in formulating stories." },
+        { date: "2024-07-09", speaker: "Minhal Farrukh", title: "My Travel Journey", description: "Embark on a fun journey as I share stories from the places I have travelled! Join me as we explore vibrant cultures, breathtaking landscapes, and the unique experiences!" },
         { date: "2024-07-23", speaker: "Adam Bento", title: "Director's Take", description: "Discussing past, present, and future projects." },
         { date: "2024-07-30", speaker: "Shawn Foster", title: "How To Present", description: "TBD" },
-        { date: "2024-08-06", speaker: "Gunner Gunn", title: "Character Design Is My Passion", description: "Ever wonder what makes your favourite cartoon characters so memorable?..." },
-        { date: "2024-08-13", speaker: "James Johnson", title: "So what's that YouTube stuff you do?", description: "I will be talking about what I’ve made on YouTube and what Games I’ve made for them..." },
+        { date: "2024-08-06", speaker: "Gunner Gunn", title: "Character Design Is My Passion", description: "Ever wonder what makes youre favourite cartoon characters so memorable? In this presentation I will go over the techniques artists use every day to design such iconic characters!" },
+        { date: "2024-08-13", speaker: "James Johnson", title: "So what's that YouTube stuff you do?", description: "I will be talking about what I’ve made on YouTube and what Games I’ve made for them, I will also talk about what makes some videos effective and what I’ve learnt, while also showing some of my projects." },
         { date: "2025-06-25", speaker: "Ashe Night", title: "How to Use a Mac", description: "Want to learn something about your favourite computer named after a fruit? Well you're in luck, because I'm about to show you just how much you can do in our little Orchard, and with your own 🍎 gear at home." },
         { date: "2025-06-30", speaker: "Allyson Steward", title: "How to Revive the MCU", description: "We will examine what makes the MCU valuable and explore the opportunities Hollywood and Disney are overlooking." }
+        { date: "2025-07-09", speaker: "TBD", title: "TBD", description: "TBD"}
     ];
 
     const weekPicker = document.getElementById('weekPicker');
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return new Date(talk.date).getFullYear() === year;
         });
 
-        // Week Picker: reset and hide/show
+        // Week Picker: reset and hide/show 
         if (filteredTalks.length === 0) {
             weekPicker.style.display = 'none';
             const row = tbody.insertRow();
