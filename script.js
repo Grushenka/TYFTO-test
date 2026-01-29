@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loadTalksByYear(2025);
     });
     document.getElementById('btn2026').addEventListener('click', () => {
-        selectedYear = 2065;
+        selectedYear = 2026;
         setActiveYearButton(2026);
         loadTalksByYear(2026);
     });
