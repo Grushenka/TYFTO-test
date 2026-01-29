@@ -91,6 +91,12 @@ document.addEventListener('DOMContentLoaded', function () {
         setActiveYearButton(2025);
         loadTalksByYear(2025);
     });
+    document.getElementById('btn2026').addEventListener('click', () => {
+        selectedYear = 2065;
+        setActiveYearButton(2026);
+        loadTalksByYear(2026);
+    });
+
 
     // Initial load
     setActiveYearButton(selectedYear);
