@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+    console.log('Schedule JS loaded');
+
     const talks = [
         { date: "2024-05-21", speaker: "Deanna Grogan", title: "My Top Ten Tips on a Cruise", description: "", icon: "fa-ship" },
         { date: "2024-06-04", speaker: "Sam Wagter", title: "The Elm Family", description: "Do you love stories with action, drama, romance, death, betrayal, crime and real family connections? Do you love complicated world building and character development with exciting plot twists? Do you love the Sims 4? Join us Tuesday June 4th for the Elm Family Lore presentation – you’ll pay for the full seat, but YOU’LL ONLY NEED THE EDGE (edge…edge…edge…)", icon: "fa-users" },
@@ -29,30 +31,39 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Week Picker: reset and hide/show 
-        if (filteredTalks.length === 0) {
-            weekPicker.style.display = 'none';
-            const row = tbody.insertRow();
-            const cell = row.insertCell();
-            cell.colSpan = 4;
-            cell.innerText = `No talks scheduled for ${year}.`;
-            cell.style.textAlign = "center";
-        } else {
-            weekPicker.style.display = 'inline-block';
-            // Set week picker to week of first talk
-            const firstTalkDate = new Date(filteredTalks[0].date);
-            const isoWeek = getISOWeekString(firstTalkDate);
-            weekPicker.value = isoWeek;
+if (filteredTalks.length === 0) {
 
-            filteredTalks.forEach(talk => {
-                const row = tbody.insertRow();
-                row.insertCell().innerText = talk.date;
-                row.insertCell().innerText = talk.speaker;
-                const titleCell = row.insertCell();
-                titleCell.innerHTML = `<i class="fa ${talk.icon || 'fa-comment'}"></i> ${talk.title}`;
-                row.insertCell().innerText = talk.description;
-            });
-        }
+    if (weekPicker) {
+        weekPicker.style.display = 'none';
     }
+
+    const row = tbody.insertRow();
+    const cell = row.insertCell();
+    cell.colSpan = 4;
+    cell.innerText = `No talks scheduled for ${year}.`;
+    cell.style.textAlign = "center";
+
+} else {
+
+    if (weekPicker) {
+        weekPicker.style.display = 'inline-block';
+
+        // Set week picker to week of first talk
+        const firstTalkDate = new Date(filteredTalks[0].date);
+        const isoWeek = getISOWeekString(firstTalkDate);
+        weekPicker.value = isoWeek;
+    }
+
+    filteredTalks.forEach(talk => {
+        const row = tbody.insertRow();
+        row.insertCell().innerText = talk.date;
+        row.insertCell().innerText = talk.speaker;
+        const titleCell = row.insertCell();
+        titleCell.innerHTML = `<i class="fa ${talk.icon || 'fa-comment'}"></i> ${talk.title}`;
+        row.insertCell().innerText = talk.description;
+    });
+}
+
 
     function setActiveYearButton(year) {
         document.querySelectorAll('.year-btn').forEach(btn => btn.classList.remove('active'));
