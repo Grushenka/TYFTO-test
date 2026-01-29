@@ -15,99 +15,84 @@ document.addEventListener('DOMContentLoaded', function () {
         { date: "2024-08-13", speaker: "James Johnson", title: "So what's that YouTube stuff you do?", description: "I will be talking about what I’ve made on YouTube and what Games I’ve made for them, I will also talk about what makes some videos effective and what I’ve learnt, while also showing some of my projects." },
         { date: "2025-06-25", speaker: "Ashe Night", title: "How to Use a Mac", description: "Want to learn something about your favourite computer named after a fruit? Well you're in luck, because I'm about to show you just how much you can do in our little Orchard, and with your own 🍎 gear at home." },
         { date: "2025-06-30", speaker: "Allyson Steward", title: "How to Revive the MCU", description: "We will examine what makes the MCU valuable and explore the opportunities Hollywood and Disney are overlooking." },
-        { date: "2026-02-05", speaker: "Aava Kahani", title: "30 Rock or 1393 Western Road: Why 30 Rock Is The Best Workplace Comedy", description: "Think your life is stressful? Your boss is a character? Your coworkers are…well, themselves? 30 Rock has been there, done that, and somehow made it hilarious. In this presentation, I will dive into why Tina Fey’s genius, Liz Lemon’s chaos, and Jack Donaghy’s questionable life advice make the show the crown jewel of 2010s comedy. Prepare to laugh, quote, and maybe even question why you’ve spent so many hours watching literally anything else. By the end, you’ll see why everyone should experience 30 Rock at least once!!"},
+        { date: "2026-02-05", speaker: "Aava Kahani", title: "30 Rock or 1393 Western Road: Why 30 Rock Is The Best Workplace Comedy", description: "Think your life is stressful? Your boss is a character? Your coworkers are…well, themselves? 30 Rock has been there, done that, and somehow made it hilarious. In this presentation, I will dive into why Tina Fey’s genius, Liz Lemon’s chaos, and Jack Donaghy’s questionable life advice make the show the crown jewel of 2010s comedy. Prepare to laugh, quote, and maybe even question why you’ve spent so many hours watching literally anything else. By the end, you’ll see why everyone should experience 30 Rock at least once!!" },
         { date: "2026-02-12", speaker: "Zimo Feng", title: "How To Present", description: "As an artist I'd like to share some of my artwork, focusing on drawing, digital painting and other media of art. I will talk about different types of artworks I create, the visual language I use in narrative works, and my experience of learning. I hope that this presentation will give the team a better understanding of my work and how visual storytelling can be used to convey ideas and personal perspectives." }
     ];
 
     const weekPicker = document.getElementById('weekPicker');
+    const table = document.getElementById('talksTable');
     let selectedYear = new Date().getFullYear();
 
+    if (!table) {
+        console.error('talksTable not found');
+        return;
+    }
+
+    const tbody = table.querySelector('tbody');
+
     function loadTalksByYear(year) {
-        const tbody = document.getElementById('talksTable').getElementsByTagName('tbody')[0];
         tbody.innerHTML = '';
 
-        const filteredTalks = talks.filter(talk => {
-            return new Date(talk.date).getFullYear() === year;
+        const filteredTalks = talks.filter(talk =>
+            new Date(talk.date).getFullYear() === year
+        );
+
+        if (filteredTalks.length === 0) {
+            if (weekPicker) weekPicker.style.display = 'none';
+            const row = tbody.insertRow();
+            const cell = row.insertCell();
+            cell.colSpan = 4;
+            cell.textContent = `No talks scheduled for ${year}.`;
+            cell.style.textAlign = 'center';
+            return;
+        }
+
+        if (weekPicker) {
+            weekPicker.style.display = 'inline-block';
+            weekPicker.value = getISOWeekString(new Date(filteredTalks[0].date));
+        }
+
+        filteredTalks.forEach(talk => {
+            const row = tbody.insertRow();
+            row.insertCell().textContent = talk.date;
+            row.insertCell().textContent = talk.speaker;
+            row.insertCell().innerHTML = `<i class="fa ${talk.icon || 'fa-comment'}"></i> ${talk.title}`;
+            row.insertCell().textContent = talk.description;
         });
-
-        // Week Picker: reset and hide/show 
-if (filteredTalks.length === 0) {
-
-    if (weekPicker) {
-        weekPicker.style.display = 'none';
     }
-
-    const row = tbody.insertRow();
-    const cell = row.insertCell();
-    cell.colSpan = 4;
-    cell.innerText = `No talks scheduled for ${year}.`;
-    cell.style.textAlign = "center";
-
-} else {
-
-    if (weekPicker) {
-        weekPicker.style.display = 'inline-block';
-
-        // Set week picker to week of first talk
-        const firstTalkDate = new Date(filteredTalks[0].date);
-        const isoWeek = getISOWeekString(firstTalkDate);
-        weekPicker.value = isoWeek;
-    }
-
-    filteredTalks.forEach(talk => {
-        const row = tbody.insertRow();
-        row.insertCell().innerText = talk.date;
-        row.insertCell().innerText = talk.speaker;
-        const titleCell = row.insertCell();
-        titleCell.innerHTML = `<i class="fa ${talk.icon || 'fa-comment'}"></i> ${talk.title}`;
-        row.insertCell().innerText = talk.description;
-    });
-}
-
 
     function setActiveYearButton(year) {
-        document.querySelectorAll('.year-btn').forEach(btn => btn.classList.remove('active'));
-        const button = document.getElementById(`btn${year}`);
-        if (button) button.classList.add('active');
+        document.querySelectorAll('.year-btn').forEach(btn =>
+            btn.classList.remove('active')
+        );
+        const activeBtn = document.getElementById(`btn${year}`);
+        if (activeBtn) activeBtn.classList.add('active');
     }
 
-    // Convert a date to ISO week format (e.g., "2024-W22")
     function getISOWeekString(date) {
-        const tempDate = new Date(date.getTime());
-        tempDate.setUTCDate(tempDate.getUTCDate() + 4 - (tempDate.getUTCDay() || 7));
+        const tempDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+        const day = tempDate.getUTCDay() || 7;
+        tempDate.setUTCDate(tempDate.getUTCDate() + 4 - day);
         const yearStart = new Date(Date.UTC(tempDate.getUTCFullYear(), 0, 1));
         const weekNo = Math.ceil((((tempDate - yearStart) / 86400000) + 1) / 7);
         return `${tempDate.getUTCFullYear()}-W${String(weekNo).padStart(2, '0')}`;
     }
 
-    // Button click events
-    const btn2024 = document.getElementById('btn2024');
-if (btn2024) {
-    btn2024.addEventListener('click', () => {
-        selectedYear = 2024;
-        setActiveYearButton(2024);
-        loadTalksByYear(2024);
+    // Button handlers (defensive)
+    [
+        { id: 'btn2024', year: 2024 },
+        { id: 'btn2025', year: 2025 },
+        { id: 'btn2026', year: 2026 }
+    ].forEach(({ id, year }) => {
+        const btn = document.getElementById(id);
+        if (btn) {
+            btn.addEventListener('click', () => {
+                selectedYear = year;
+                setActiveYearButton(year);
+                loadTalksByYear(year);
+            });
+        }
     });
-}
-
-const btn2025 = document.getElementById('btn2025');
-if (btn2025) {
-    btn2025.addEventListener('click', () => {
-        selectedYear = 2025;
-        setActiveYearButton(2025);
-        loadTalksByYear(2025);
-    });
-}
-
-const btn2026 = document.getElementById('btn2026');
-if (btn2026) {
-    btn2026.addEventListener('click', () => {
-        selectedYear = 2026;
-        setActiveYearButton(2026);
-        loadTalksByYear(2026);
-    });
-}
-
 
     // Initial load
     setActiveYearButton(selectedYear);
