@@ -15,16 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
         { date: "2025-06-30", speaker: "Allyson Steward", title: "How to Revive the MCU", description: "We will examine what makes the MCU valuable and explore the opportunities Hollywood and Disney are overlooking." },
         { date: "2026-02-05", speaker: "Aava Kahani", title: "30 Rock or 1393 Western Road: Why 30 Rock Is The Best Workplace Comedy", description: "Think your life is stressful? Your boss is a character? Your coworkers are…well, themselves? 30 Rock has been there, done that, and somehow made it hilarious. In this presentation, I will dive into why Tina Fey’s genius, Liz Lemon’s chaos, and Jack Donaghy’s questionable life advice make the show the crown jewel of 2010s comedy. Prepare to laugh, quote, and maybe even question why you’ve spent so many hours watching literally anything else. By the end, you’ll see why everyone should experience 30 Rock at least once!!"},
         { date: "2026-02-12", speaker: "Zimo Feng", title: "How To Present", description: "As an artist I'd like to share some of my artwork, focusing on drawing, digital painting and other media of art. I will talk about different types of artworks I create, the visual language I use in narrative works, and my experience of learning. I hope that this presentation will give the team a better understanding of my work and how visual storytelling can be used to convey ideas and personal perspectives." },
-        { date: "2026-02-", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2026-02-", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2026-03-", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2026-03-", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2026-03-", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2026-02-1", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2026-02-2", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2026-03-3", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2026-03-4", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2026-03-5", speaker: "TBD", title: "TBD", description: "TBD" },
         { date: "2026-03-26", speaker: "Laila El attar", title: "TBD", description: "TBD" },
-        { date: "2026--", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2026-04-", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2026-04-", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2026-04-", speaker: "TBD", title: "TBD", description: "TBD" }
+        { date: "2026-7-", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2026-04-8", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2026-04-9", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2026-04-10", speaker: "TBD", title: "TBD", description: "TBD" }
     ];
 
     const weekPicker = document.getElementById('weekPicker');
