@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { date: "2026--", speaker: "TBD", title: "TBD", description: "TBD" },
         { date: "2026-04-", speaker: "TBD", title: "TBD", description: "TBD" },
         { date: "2026-04-", speaker: "TBD", title: "TBD", description: "TBD" },
-        { date: "2026-04-", speaker: "TBD", title: "TBD", description: "TBD" },
+        { date: "2026-04-", speaker: "TBD", title: "TBD", description: "TBD" }
     ];
 
     const weekPicker = document.getElementById('weekPicker');
